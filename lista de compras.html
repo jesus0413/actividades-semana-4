@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista decompras</h1>
+    <input type="text"  id="input">
+    <button id= "boton"> Agregar </button>
+
+    <ul>
+        <li>Tomates</li>
+        <li>Bananas</li>
+    </ul>
+  
+    
+    <script>
+
+        var boton= document.getElementById('boton');
+        var input = document.getElementById('input');
+         var ul = document.querySelector('ul');
+
+         boton.addEventListener('click', function(){
+             if (input.value.length > 0){
+             var li= document.createElement('li');
+             li.appendChild(document.createTextNode(input.value));
+             ul.appendChild(li);
+             input.value='';
+             var botonEliminar= document.createElement('button');
+             botonEliminar.appendChild(document.createTextNode('Eliminar'));
+             botonEliminar.onclick=Eliminar;
+             li.appendChild(botonEliminar);
+             }
+
+         })
+
+         function Eliminar(e){
+             e.target.parentNode.remove();
+         }
+
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video#13</title>
+</head>
+<body>
+    <script>
+        var usuarios=[
+            { 
+                usuarioNombre:'jesus',
+                contraseña: '123456'
+
+            },
+            {
+                usuarioNombre: 'daniela',
+                contraseña: 'abc'
+            },
+        ]
+          
+        var notas = [
+            {
+                nombre: 'jesus',
+                nota: 10
+            },
+            {
+                nombre: 'daniela',
+                nota:9
+              },
+       
+               
+
+
+        ]
+        var usuarioprompt= prompt('ingrese su usuario');
+        var contraseñaprompt= prompt('ingrese su contraseña');
+       
+        
+        function iniciarsesion(user,pass){
+           if (user=== usuarios[0].usuarioNombre && pass=== usuarios[0].contraseña) {
+              console.log (notas[0].nota);
+           }
+            else if (user=== usuarios[1].usuarioNombre && pass=== usuarios[1].contraseña) {
+              console.log (notas[1].nota);
+           } else{
+               alert ('ups, usuario o contraseña invalido')
+           }
+       }
+       
+       iniciarsesion(usuarioprompt, contraseñaprompt);
+   </script>
+    
+</body>
+</html>

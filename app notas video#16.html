@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video#16</title>
+</head>
+<body>
+    
+    <script>
+         var usuarios=[
+             { 
+                 usuarioNombre:'jesus',
+                 contraseña: '123456'
+
+             },
+             {
+                 usuarioNombre: 'daniela',
+                 contraseña: 'abc'
+             },
+             {
+                 usuarioNombre: 'rafael',
+                 contraseña: 'abcde'
+             },
+             {
+                 usuarioNombre: 'alejandra',
+                 contraseña: 'hola123'
+             }
+         ]
+           
+         var notas = [
+             {
+                 nombre: 'jesus',
+                 nota: 10
+             },
+             {
+                 nombre: 'daniela',
+                 nota:9
+               },
+               {
+                 nombre: 'rafael',
+                 nota:8
+               },
+               {
+                 nombre: 'alejandra',
+                 nota:7
+               },
+               
+
+
+         ]
+         var usuarioprompt= prompt('ingrese su usuario');
+         var contraseñaprompt= prompt('ingrese su contraseña');
+
+         function usuarioValido(user, pass){
+             for (var i=0; i< usuarios.length; i++){
+                if (user=== usuarios[0].usuarioNombre && pass=== usuarios[0].contraseña) {
+    
+             return true;
+             } else if (user=== usuarios[1].usuarioNombre && pass=== usuarios[1].contraseña ){
+                           return true;
+            }else if (user=== usuarios[2].usuarioNombre && pass=== usuarios[2].contraseña ){
+                           return true;
+            }else if (user=== usuarios[3].usuarioNombre && pass=== usuarios[3].contraseña ){
+                           return true;
+            }
+             } return false;
+         }
+         
+         function iniciarsesion(user,pass){
+            if (usuarioValido(user, pass)){
+                console.log (notas);
+            } else{
+                alert ('ups, usuario o contraseña invalido')
+            }
+             
+        }
+        
+        iniciarsesion(usuarioprompt, contraseñaprompt);
+    </script>
+
+</body>
+</html>

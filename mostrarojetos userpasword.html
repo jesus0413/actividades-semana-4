@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+ <script>
+      var usuarios=[
+            { 
+                usuarioNombre:'jesus',
+                contraseña: '123456'
+
+            },
+            {
+                usuarioNombre: 'pepe',
+                contraseña: 'abc'
+            },
+            {
+                usuarioNombre: 'pepa',
+                contraseña: '123#'
+            },
+            {
+                usuarioNombre: 'pipe',
+                contraseña: 'pipe123'
+            },
+            {
+                usuarioNombre: 'pedro',
+                contraseña: 'pedro321'
+            },
+        ]
+        
+          
+        var user= prompt('ingrese su nombre');
+        var contraseña= prompt('ingrese su contraseña');
+        function iniciarsesion(user,pass){
+           if (user=== usuarios[0].usuarioNombre && pass=== usuarios[0].contraseña) {
+              alert('hola jesus como estas');
+           }
+            else if (user=== usuarios[1].usuarioNombre && pass=== usuarios[1].contraseña) {
+                alert('hola pepe como estas');}
+            else if (user=== usuarios[2].usuarioNombre && pass=== usuarios[2].contraseña) {
+            alert('hola pepa como estas');
+           } 
+           else if (user=== usuarios[3].usuarioNombre && pass=== usuarios[3].contraseña) {
+            alert('hola pipe como estas');
+           }
+           else if (user=== usuarios[4].usuarioNombre && pass=== usuarios[4].contraseña) {
+            alert('hola pedro como estas');
+           }
+           else{
+               alert ('usuario o contraseña invalido')
+           }
+       }
+       
+       iniciarsesion(user, contraseña);
+ </script>
+</body>
+</html>
